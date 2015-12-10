@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:onClick="Station1"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:text="FOLA Station"
+        android:id="@+id/station1"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:onClick="Station2"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text="Cleaning Station"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/station2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/station1"
+        android:layout_alignRight="@+id/station1"
+        android:layout_alignEnd="@+id/station1" />
+    <Button
+        android:onClick="Dockwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dock"
+        android:id="@+id/dock"
+        android:layout_marginTop="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/station2"
+        android:layout_toStartOf="@+id/undock"
+        android:layout_marginLeft="5dp"
+        android:layout_toLeftOf="@+id/undock" />
+    <Button
+        android:onClick="Undockwork"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Undock"
+        android:id="@+id/undock"
+        android:layout_alignParentRight="true"
+        android:layout_above="@+id/scrollView"
+        android:layout_toEndOf="@+id/textView4"
+        android:layout_marginRight="5dp"
+        android:layout_toRightOf="@+id/textView4" />
+
+    <ScrollView
+        android:transcriptMode="alwaysScroll"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/scrollView"
+        android:layout_above="@+id/editText"
+        android:layout_below="@+id/dock"
+        android:background="#c5ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#000000"
+            android:id="@+id/textresponse" />
+
+    </ScrollView>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@mipmap/background2"
+        android:layout_above="@+id/editText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/clear"
+        android:hint="Input Command . . ."
+        android:layout_toLeftOf="@+id/send"
+        android:layout_toStartOf="@+id/send"
+        android:layout_alignTop="@+id/send" />
+
+    <Button
+        android:onClick="Send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:id="@+id/send"
+        android:background="#5e5e5e"
+        android:textColor="#ffffff"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/clear"
+        android:layout_alignParentRight="true" />
+
+    <Button
+        android:onClick="Clearbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clear"
+        android:id="@+id/clear"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_above="@+id/disconnect"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/send"
+        android:layout_alignEnd="@+id/send" />
+
+    <Button
+        android:onClick="Disconbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Disconnect"
+        android:id="@+id/disconnect"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/clear"
+        android:layout_alignEnd="@+id/clear"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/textView2"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/station1"
+        android:layout_toRightOf="@id/station1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/textView3"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/station2"
+        android:layout_toRightOf="@id/station2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/station2"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
+
+
